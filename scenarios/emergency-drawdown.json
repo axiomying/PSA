@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "emergency-drawdown",
+  "description": "Treasury drawdown reaches the configured circuit-breaker threshold.",
+  "seed": 7,
+  "cycles": 1,
+  "treasuryOverrides": {
+    "drawdownBps": 1200,
+    "unallocatedRevenueUsd": 0
+  },
+  "expected": {
+    "riskRegime": "HALTED",
+    "reserveTargetBps": 10000,
+    "guardrailsPassed": true
+  }
+}

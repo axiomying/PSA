@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "calm-market",
+  "description": "Normal observation quality, low drawdown, and full policy confidence.",
+  "seed": 42,
+  "cycles": 24,
+  "treasuryOverrides": {
+    "drawdownBps": 80,
+    "unallocatedRevenueUsd": 35000
+  },
+  "expected": {
+    "initialExecutionMode": "DRY_RUN",
+    "guardrailsPassed": true
+  }
+}
