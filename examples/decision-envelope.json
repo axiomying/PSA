@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "decisionId": "psa_example_0001",
+  "timestamp": "2026-01-01T00:00:00.000Z",
+  "mode": "DRY_RUN",
+  "provenance": {
+    "modelVersion": "psa-intelligence/0.1.0",
+    "policy": "psa.config.json",
+    "codeRevision": "example"
+  },
+  "risk": {
+    "regime": "CALM",
+    "marketStressBps": 3581,
+    "confidenceBps": 9411
+  },
+  "allocation": {
+    "targetWeights": {
+      "USDC": 2000,
+      "ETH": 1936,
+      "stETH": 2486,
+      "USTB": 2991,
+      "XAUT": 587
+    },
+    "turnoverBps": 1422
+  },
+  "guardrails": {
+    "passed": true,
+    "checks": [
+      { "name": "weights-sum", "passed": true },
+      { "name": "reserve-floor", "passed": true },
+      { "name": "single-asset-cap", "passed": true },
+      { "name": "rwa-cap", "passed": true },
+      { "name": "crypto-cap", "passed": true },
+      { "name": "turnover-cap", "passed": true }
+    ]
+  }
+}
