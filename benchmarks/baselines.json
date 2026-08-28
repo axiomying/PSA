@@ -1,0 +1,16 @@
+{
+  "suite": "psa-policy-safety-v1",
+  "kind": "acceptance-thresholds",
+  "thresholds": {
+    "guardrailPassRate": 1,
+    "maximumWeightSumErrorBps": 0,
+    "maximumNormalTurnoverBps": 2500,
+    "maximumDecisionDriftForIdenticalInput": 0,
+    "circuitBreakerReserveTargetBps": 10000
+  },
+  "requiredScenarios": [
+    "calm-market",
+    "emergency-drawdown"
+  ],
+  "note": "Thresholds are acceptance criteria, not measured investment performance."
+}
