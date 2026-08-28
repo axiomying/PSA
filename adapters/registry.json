@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "executionEnabled": false,
+  "adapters": [
+    {
+      "id": "fixture-market-v1",
+      "kind": "observation",
+      "status": "active",
+      "readOnly": true,
+      "implementation": "src/fixtures.ts"
+    },
+    {
+      "id": "deterministic-policy-v1",
+      "kind": "evaluation",
+      "status": "active",
+      "readOnly": true,
+      "implementation": "src/guardrails.ts"
+    },
+    {
+      "id": "onchain-treasury-v1",
+      "kind": "execution",
+      "status": "planned",
+      "readOnly": false,
+      "implementation": null
+    }
+  ]
+}
