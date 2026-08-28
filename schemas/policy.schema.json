@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.pon.network/psa/policy-1.0.0.json",
+  "title": "PSA Treasury Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reserveAsset",
+    "reserveFloorBps",
+    "maxRwaBps",
+    "maxCryptoBps",
+    "maxAssetBps",
+    "maxTurnoverBps",
+    "minConfidenceBps",
+    "circuitBreakerBps"
+  ],
+  "properties": {
+    "reserveAsset": { "type": "string", "minLength": 1 },
+    "reserveFloorBps": { "$ref": "#/$defs/bps" },
+    "maxRwaBps": { "$ref": "#/$defs/bps" },
+    "maxCryptoBps": { "$ref": "#/$defs/bps" },
+    "maxAssetBps": { "$ref": "#/$defs/bps" },
+    "maxTurnoverBps": { "$ref": "#/$defs/bps" },
+    "minConfidenceBps": { "$ref": "#/$defs/bps" },
+    "circuitBreakerBps": { "$ref": "#/$defs/bps" }
+  },
+  "$defs": {
+    "bps": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+    }
+  }
+}

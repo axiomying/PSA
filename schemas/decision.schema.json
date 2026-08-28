@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.pon.network/psa/decision-1.0.0.json",
+  "title": "PSA Decision Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "decisionId",
+    "timestamp",
+    "mode",
+    "provenance",
+    "risk",
+    "allocation",
+    "guardrails"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "decisionId": { "type": "string", "minLength": 8 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "mode": { "enum": ["DRY_RUN", "SHADOW", "LIVE"] },
+    "provenance": {
+      "type": "object",
+      "required": ["modelVersion", "policy", "codeRevision"],
+      "properties": {
+        "modelVersion": { "type": "string" },
+        "policy": { "type": "string" },
+        "codeRevision": { "type": "string" }
+      }
+    },
+    "risk": {
+      "type": "object",
+      "required": ["regime", "marketStressBps", "confidenceBps"],
+      "properties": {
+        "regime": { "enum": ["CALM", "WATCH", "DEFENSIVE", "HALTED"] },
+        "marketStressBps": { "type": "integer", "minimum": 0, "maximum": 10000 },
+        "confidenceBps": { "type": "integer", "minimum": 0, "maximum": 10000 }
+      }
+    },
+    "allocation": {
+      "type": "object",
+      "required": ["targetWeights", "turnoverBps"],
+      "properties": {
+        "targetWeights": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "type": "integer", "minimum": 0, "maximum": 10000 }
+        },
+        "turnoverBps": { "type": "integer", "minimum": 0, "maximum": 10000 }
+      }
+    },
+    "guardrails": {
+      "type": "object",
+      "required": ["passed", "checks"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "passed"],
+            "properties": {
+              "name": { "type": "string" },
+              "passed": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
