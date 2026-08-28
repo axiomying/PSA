@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="500" viewBox="0 0 1440 500" role="img" aria-labelledby="title description">
+  <title id="title">PON Sovereign Agent</title>
+  <description id="description">Autonomous intelligence for a sovereign protocol treasury.</description>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.52" stop-color="#0a1430"/>
+      <stop offset="1" stop-color="#101c27"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#66e3ff"/>
+      <stop offset="0.5" stop-color="#9b8cff"/>
+      <stop offset="1" stop-color="#6dffb5"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#6dffb5" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6dffb5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8bb8cc" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1440" height="500" rx="24" fill="url(#background)"/>
+  <rect width="1440" height="500" rx="24" fill="url(#grid)"/>
+  <circle cx="1120" cy="250" r="320" fill="url(#glow)"/>
+  <g transform="translate(110 92)">
+    <rect width="126" height="36" rx="18" fill="#6dffb5" fill-opacity="0.1" stroke="#6dffb5" stroke-opacity="0.7"/>
+    <circle cx="22" cy="18" r="5" fill="#6dffb5" filter="url(#softGlow)"/>
+    <text x="38" y="23" fill="#b9ffdc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="2">ONLINE</text>
+    <text x="0" y="124" fill="#f6f8ff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="70" font-weight="700" letter-spacing="-3">PON Sovereign Agent</text>
+    <rect y="151" width="770" height="4" rx="2" fill="url(#signal)"/>
+    <text x="0" y="210" fill="#9cabc4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" letter-spacing="3">AUTONOMOUS INTELLIGENCE × SOVEREIGN TREASURY</text>
+    <text x="0" y="270" fill="#6dffb5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26">$PSA</text>
+  </g>
+  <g transform="translate(1072 112)" fill="none" stroke-linecap="round">
+    <circle cx="126" cy="126" r="108" stroke="#66e3ff" stroke-opacity="0.22"/>
+    <circle cx="126" cy="126" r="76" stroke="#9b8cff" stroke-opacity="0.36"/>
+    <circle cx="126" cy="126" r="42" stroke="#6dffb5" stroke-opacity="0.65"/>
+    <path d="M18 126h52l25-48 31 96 31-72 25 24h52" stroke="url(#signal)" stroke-width="4" filter="url(#softGlow)"/>
+    <circle cx="126" cy="126" r="7" fill="#f6f8ff" stroke="none"/>
+  </g>
+</svg>
