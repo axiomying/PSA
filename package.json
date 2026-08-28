@@ -1,0 +1,31 @@
+{
+  "name": "pon-sovereign-agent",
+  "version": "0.1.0",
+  "description": "An autonomous AI treasury for protocol-generated revenue across crypto and tokenized real-world assets.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "psa": "./src/cli.ts"
+  },
+  "scripts": {
+    "psa": "node --experimental-strip-types src/cli.ts",
+    "start": "node --experimental-strip-types src/cli.ts status",
+    "demo": "node --experimental-strip-types src/cli.ts simulate --cycles 12",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "validate:repo": "node scripts/validate-repository.mjs",
+    "catalog": "node scripts/print-catalog.mjs",
+    "check": "npm run test && npm run validate:repo && node --experimental-strip-types --check src/cli.ts"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "keywords": [
+    "ai-agent",
+    "autonomous-treasury",
+    "crypto",
+    "defai",
+    "rwa",
+    "tokenized-assets"
+  ],
+  "license": "MIT"
+}

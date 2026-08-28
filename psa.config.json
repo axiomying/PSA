@@ -1,0 +1,18 @@
+{
+  "identity": {
+    "name": "PON Sovereign Agent",
+    "symbol": "$PSA",
+    "network": "simulation",
+    "mandate": "Compound protocol-generated revenue without compromising protocol sovereignty."
+  },
+  "policy": {
+    "reserveAsset": "USDC",
+    "reserveFloorBps": 2000,
+    "maxRwaBps": 5000,
+    "maxCryptoBps": 4500,
+    "maxAssetBps": 3500,
+    "maxTurnoverBps": 2500,
+    "minConfidenceBps": 6500,
+    "circuitBreakerBps": 1200
+  }
+}
