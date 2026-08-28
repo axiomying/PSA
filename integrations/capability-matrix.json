@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "capabilities": [
+    {
+      "id": "fixture-observations",
+      "class": "market-data",
+      "status": "implemented",
+      "authority": "read-only"
+    },
+    {
+      "id": "chain-reader",
+      "class": "onchain-data",
+      "status": "planned",
+      "authority": "read-only"
+    },
+    {
+      "id": "rwa-evidence-reader",
+      "class": "evidence",
+      "status": "planned",
+      "authority": "read-only"
+    },
+    {
+      "id": "model-provider",
+      "class": "intelligence",
+      "status": "planned",
+      "authority": "proposal-only"
+    },
+    {
+      "id": "treasury-executor",
+      "class": "execution",
+      "status": "blocked-pending-audit",
+      "authority": "none"
+    }
+  ]
+}
