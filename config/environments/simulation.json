@@ -1,0 +1,18 @@
+{
+  "environment": "simulation",
+  "network": {
+    "name": "deterministic-fixture",
+    "chainId": null,
+    "rpcRequired": false
+  },
+  "observationAdapter": "fixture-market-v1",
+  "policyAdapter": "deterministic-policy-v1",
+  "execution": {
+    "enabled": false,
+    "adapter": null
+  },
+  "persistence": {
+    "mode": "memory",
+    "stateDirectory": "./data"
+  }
+}
