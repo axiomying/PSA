@@ -1,0 +1,10 @@
+{
+  "environment": "simulation",
+  "chainId": null,
+  "status": "dry-run-only",
+  "contracts": {},
+  "treasuryAddress": null,
+  "tokenAddress": null,
+  "executionEnabled": false,
+  "message": "No contracts, treasury, or token are deployed by this research repository."
+}
