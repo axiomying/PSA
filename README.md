@@ -18,7 +18,7 @@
 $ npm run --silent psa -- status
 ┌──────────────────────────────────────────────────────────┐
 │  PON Sovereign Agent                                $PSA  │
-│  AUTONOMOUS INTELLIGENCE × SOVEREIGN TREASURY            │
+│  CA：0x762952aae34acd9bf4b3055b0e11948a50ee1799
 └──────────────────────────────────────────────────────────┘
 
 NETWORK      simulation
